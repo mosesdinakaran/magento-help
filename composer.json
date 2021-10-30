@@ -6,12 +6,6 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
-    "require": {
-        "magento/magento-cloud-metapackage": "2.3.3",
-        "firegento/fastsimpleimport": "^1.1",
-        "guzzlehttp/guzzle": "^6.3",
-        "cweagans/composer-patches": "^1.6.5"
-    },
     "config": {
         "use-include-path": true
     },
