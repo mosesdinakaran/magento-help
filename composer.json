@@ -23,5 +23,5 @@
             "src/NonComposerComponentRegistration.php"
         ]
     },
-    "minimum-stability": "alpha"
+    "minimum-stability": "dev"
 }
