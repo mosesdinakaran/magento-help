@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2022 Alshaya, LLC. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/publisher.xsd">
+    <publisher topic="moses.topic.order.update">
+        <connection name="amqp" exchange="magento"/>
+    </publisher>
+    <publisher topic="moses.topic.order.push">
+        <connection name="amqp" exchange="magento"/>
+    </publisher>
+</config>

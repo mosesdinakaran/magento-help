@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+
+
+    <consumer name="moses.topic.order.push" queue="moses.topic.order.push"
+              handler="Moses\RabbitMq\Model\OmsConsumer::process"
+              consumerInstance="Magento\Framework\MessageQueue\Consumer"
+              connection="amqp"/>
+
+    <!--
+    <consumer name="moses.consumer.test" queue="moses.test"
+              handler="Moses\RabbitMq\Model\OmsConsumer::process"
+              consumerInstance="Magento\Framework\MessageQueue\Consumer"
+              connection="amqp"/>
+
+  -->
+<!--
+    <consumer name="alshayaAlgoliaProductFeedConsumer" queue="alshaya-algolia-product-feed"
+              consumerInstance="Magento\Framework\MessageQueue\BatchConsumer"
+              handler="Alshaya\FeedQueueAlgolia\Queue\Consumer::execute"
+              connection="amqp"/>
+
+              -->
+</config>

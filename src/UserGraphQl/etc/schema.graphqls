@@ -1,0 +1,15 @@
+type Query {
+    users(search: String) : Users
+    @resolver(class: "Moses\\UserGraphQl\\Model\\Resolver\\Users")
+}
+type Users {
+   total_count : Int
+   list : [User]
+
+}
+type User {
+    id:Int
+    name : String
+    email: String
+    friends: [User] @resolver(class: "Moses\\UserGraphQl\\Model\\Resolver\\Friends")
+}

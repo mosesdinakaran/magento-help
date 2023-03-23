@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Alshaya, LLC. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="moses_posts" resource="default" engine="innodb"
+           comment="Affiliate Vendor Details">
+        <column xsi:type="int" name="entity_id" padding="6" unsigned="false" nullable="false" identity="true"
+                comment="Entity  ID"/>
+        <column xsi:type="varchar" name="email" length="200" nullable="false" comment="Vendor Name"/>
+        <column xsi:type="text" name="content" on_update="false" nullable="false"  comment="Created At"/>
+        <column xsi:type="varchar" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="MOSES_POSTS_ENTITY_ID">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,19 @@
+<h3>Custom Post List Block</h3>
+<?php
+echo 'asdfasdfafd'; exit;
+$posts = $this->getPostList();
+
+?>
+<ul>
+    <?php
+    foreach ($posts as $post) {
+        ?>
+        <li>
+            <?php
+            echo $post->getContent();
+            ?>
+        </li>
+        <?php
+    }
+    ?>
+</ul>

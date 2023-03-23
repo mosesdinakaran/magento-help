@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+<menu>
+    <add id="Moses_Crud::first_level_demo"
+         title="Admin Menu"
+         module="Stack_Adminmenu"
+         sortOrder="20"
+         resource="Magento_Backend::content"
+    />
+    <add id="Moses_Crud::second_level_demo"
+         title="Sub Menu"
+         module="Moses_Crud"
+         sortOrder="1"
+         action="menuitem/index/index"
+         parent="Moses_Crud::first_level_demo"
+         resource="Magento_Backend::content"
+    />
+</menu>
+</config>

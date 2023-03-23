@@ -1,0 +1,12 @@
+<?php
+
+$viewModel = $block->getViewModel();
+$product = $viewModel->getProduct("24-MB03");
+?>
+<?php if($product): ?>
+<h3>Product Detail Block</h3>
+ <div class="product info detailed">
+     <div><strong>Name: </strong><?php echo $product->getName(); ?></div>
+     <div><strong>Price: </strong><?php echo $product->getFinalPrice(); ?></div>
+</div>
+<?php endif; ?>

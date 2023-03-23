@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="moses_user" resource="default" engine="innodb"
+           comment="My User Table">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"
+                comment="User ID"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="50"
+                comment="Email"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="50"
+                comment="Name"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="moses_user_group" resource="default" engine="innodb"
+           comment="My User Table">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"
+                comment="User ID"/>
+        <column xsi:type="varchar" name="group_name" nullable="false" length="50"
+                comment="Group Name"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="moses_user_user_group" resource="default" engine="innodb"
+           comment="My User Table">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"
+                comment="User ID"/>
+        <column xsi:type="int" name="user_id" unsigned="true" nullable="false"
+                comment="User Id"/>
+        <column xsi:type="int" name="user_group_id" unsigned="true" nullable="false"
+                comment="Group Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="moses_user_user_group_user_id_moses_user_id"
+                    table="moses_user_user_group" column="user_id" referenceTable="moses_user"
+                    referenceColumn="id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="moses_user_user_group_user_group_id_moses_user_group_id"
+                    table="moses_user_user_group" column="user_group_id" referenceTable="moses_user_group"
+                    referenceColumn="id" onDelete="CASCADE"/>
+    </table>
+</schema>

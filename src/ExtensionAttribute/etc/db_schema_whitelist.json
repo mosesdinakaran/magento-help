@@ -1,0 +1,22 @@
+{
+    "sales_order": {
+        "column": {
+            "Bc_Pdfinvoice": true
+        }
+    },
+    "sales_order_grid": {
+        "column": {
+            "Bc_Pdfinvoice": true
+        }
+    },
+    "quote": {
+        "column": {
+            "Bc_Pdfinvoice": true
+        }
+    },
+    "sales_invoice": {
+        "column": {
+            "Bc_Pdfinvoice": true
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Moses_UiComponents::css/styles.css"/>
+        <script src="Moses_UiComponents::js/hello.js" defer="true" />
+    </head>
+    <referenceContainer name="content">
+        <!--
+        <block name="moses.product.view.custom"
+               template="Moses_UiComponents::product.phtml">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Moses\UiComponents\ViewModel\Product</argument>
+            </arguments>
+        </block>
+
+
+        <referenceBlock name="product.info">
+
+            <block class="Moses\Crud\Block\Postlist" name="moses_product_posts" template="Moses_Crud::postlist.phtml">
+            </block>
+        </referenceBlock>
+ -->
+        <block class="Moses\Blog\Block\Bloglist" name="moses_blog_list" template="Moses_Blog::bloglist.phtml"/>
+        <block class="Moses\UiComponents\Block\Product" name="moses_product" template="Moses_UiComponents::productBlock.phtml">
+        </block>
+
+        <block class="Moses\UiComponents\Block\Display" name="helloworld_display" template="Moses_UiComponents::sayhello.phtml" />
+        <block name="moses_helloworld_includejs" template="Moses_UiComponents::includejs.phtml" />
+
+
+    </referenceContainer>
+</page>
