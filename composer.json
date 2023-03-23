@@ -1,7 +1,7 @@
 {
     "name": "moses/magento-help",
     "description": "Moses Magento Help",
-    "version": "v1.0.0",
+    "version": "v3.0.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
