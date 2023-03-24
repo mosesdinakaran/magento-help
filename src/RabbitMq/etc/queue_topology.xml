@@ -8,7 +8,7 @@
                  destination="moses.queue.order.update"/>
 
         <binding id="moses.topic.order.push"
-                 topic="moses.topic.order.push" destinationType="queue  "
+                 topic="moses.topic.order.push" destinationType="queue"
                  destination="moses.topic.order.push"/>
 
     </exchange>
